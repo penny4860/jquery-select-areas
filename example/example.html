@@ -14,14 +14,6 @@
 					minSize: [10, 10],
 					onChanged: debugQtyAreas,
 					width: 500,
-					areas: [
-						{
-							x: 10,
-							y: 20,
-							width: 60,
-							height: 100,
-						}
-					]
 				});
 				$('#btnViewRel').click(function () {
 					var areas = $('img#example').selectAreas('relativeAreas');
@@ -65,9 +57,9 @@
 						minSize: [10, 10],
 						onChanged : debugQtyAreas,
 						width: 500,
-					});
-				$('.actionOff').attr("disabled", "disabled");
-				$('.actionOn').removeAttr("disabled")
+				});
+
+				output("")
 			};
 		</script>
 	</head>
