@@ -107,7 +107,19 @@
 			function loadImage() {
 				var sourceImageUrl = document.getElementById("inputImage").value;
 				document.querySelector("#example").src = sourceImageUrl;
-			};
+
+				// Destroy
+				$('img#example').selectAreas('destroy');
+				
+				// Created
+				$('img#example').selectAreas({
+						minSize: [10, 10],
+						onChanged : debugQtyAreas,
+						width: 500,
+					});
+				$('.actionOff').attr("disabled", "disabled");
+				$('.actionOn').removeAttr("disabled")
+				};
 		</script>
 	</head>
 
@@ -126,9 +138,7 @@
 		<div id="wrapper">
 			<h1>Demo Select Areas</h1>
 
-			<div class="image-decorator">
-				<img alt="Image principale" id="example" src="https://post-phinf.pstatic.net/MjAxODA0MjVfMzgg/MDAxNTI0NjE5MDg1ODY0.5PstBvrgQCqadrE1xNvLsrvTHj9DWj1JtwxhxzGY9Qcg.bt9tWHuwJf2pg7WHxdivE2jhwHd_NOeO3IJ9BNmwyhMg.PNG/main.png?type=w1200"/>
-			</div>
+			<img alt="Image principale" id="example" src="https://img.sonyunara.com/files/goods/53124/1566526924_0.jpg"/>
 			<table>
 				<tr>
 					<td class="actions">
